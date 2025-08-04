@@ -5,7 +5,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    # Эти свойства перегружают соответствующие в application.yml
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/mainDb
       - SPRING_DATASOURCE_USERNAME=postgres
