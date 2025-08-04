@@ -24,6 +24,17 @@ public class ExceptionApiHandler {
         );
     }
 
+    @ExceptionHandler(InsufficientFundsException.class)
+    public ResponseEntity<ErrorResponse> handleInsufficientFundsException(InsufficientFundsException ex, WebRequest request) {
+        return buildErrorResponse(
+                HttpStatus.BAD_REQUEST,
+                "Insufficient_funds",
+                ex.getMessage(),
+                request
+        );
+    }
+
+
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<ErrorResponse> handleMethodArgumentTypeMismatch(
             MethodArgumentTypeMismatchException ex,
@@ -74,7 +85,6 @@ public class ExceptionApiHandler {
                 "CONCURRENT_MODIFICATION",
                 "The resource was modified by another transaction. Please try again",
                 request
-
         );
     }
 

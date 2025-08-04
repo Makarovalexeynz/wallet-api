@@ -2,7 +2,6 @@ package com.itk.itk.mappers;
 
 import com.itk.itk.dto.WalletDTO;
 import com.itk.itk.models.Wallet;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

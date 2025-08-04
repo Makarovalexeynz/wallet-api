@@ -23,10 +23,10 @@ public class WalletController {
 
     private final WalletService walletService;
 
-    @GetMapping(path = "api/v1/wallets/{id}")
-    public ResponseEntity<WalletDTO> getWallet(@PathVariable UUID id) {
-        log.info("Getting balance for wallet ID: {}", id);
-        WalletDTO walletDTO = walletService.getBalance(id);
+    @GetMapping(path = "api/v1/wallets/{WALLET_UUID}")
+    public ResponseEntity<WalletDTO> getWallet(@PathVariable UUID WALLET_UUID) {
+        log.info("Getting balance for wallet ID: {}", WALLET_UUID);
+        WalletDTO walletDTO = walletService.getBalance(WALLET_UUID);
         return ResponseEntity.ok(walletDTO);
     }
 

@@ -1,11 +1,9 @@
 package com.itk.itk.services;
 
-
 import com.itk.itk.dto.WalletOperationRequest;
 import com.itk.itk.dto.WalletDTO;
 import com.itk.itk.dto.WalletResponse;
 import com.itk.itk.exceptions.NotFoundException;
-import com.itk.itk.models.Wallet;
 
 import java.util.UUID;
 
